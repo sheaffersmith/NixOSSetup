@@ -38,7 +38,8 @@
         vscode
         docker
 
-        # Adobe replacements
+        # System76
+        system76-firmware
     ];
 
 }
