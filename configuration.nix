@@ -55,23 +55,9 @@ in {
     services = {
         xserver = {
             enable = true;
-            displayManager.lightdm.enable = true;
-            desktopManager.pantheon.enable = true;
+           displayManager.lightdm.enable = true;
+           desktopManager.pantheon.enable = true;
             
-            # X11 input configuration for the Magic Mouse
-            inputClassSections = [
-                ''
-                  Section "InputClass"
-                    Identifier "Apple Magic Mouse"
-                    MatchProduct "Apple Magic Mouse"
-                    MatchIsPointer "on"
-                    Driver "evdev"
-                    Option "Emulate3Buttons" "false"
-                    Option "VertScrollDelta" "-100"
-                    Option "HorizScrollDelta" "-100"
-                  EndSection
-                ''
-            ];
         };
     };
 
