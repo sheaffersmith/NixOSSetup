@@ -24,6 +24,7 @@ in {
     };
 
     services = {
+        blueman.enable = true; # Optional: for GUI Bluetooth management
         openssh.enable = true;
         printing.enable = true;
         pipewire = {
@@ -36,9 +37,13 @@ in {
     
     hardware = {
         bluetooth.enable = true;
+        bluetooth.powerOnBoot = true;
         acpilight.enable = true; # keyboard backlight
         pulseaudio.enable = false;
     };
+
+    # Enable the Magic Mouse Kernel Module
+    boot.kernelModules = [ "hid-magicmouse" ];
 
     users.users."${username}" = {
         isNormalUser = true;
@@ -50,8 +55,23 @@ in {
     services = {
         xserver = {
             enable = true;
-           displayManager.lightdm.enable = true;
-           desktopManager.pantheon.enable = true;
+            displayManager.lightdm.enable = true;
+            desktopManager.pantheon.enable = true;
+            
+            # X11 input configuration for the Magic Mouse
+            inputClassSections = [
+                ''
+                  Section "InputClass"
+                    Identifier "Apple Magic Mouse"
+                    MatchProduct "Apple Magic Mouse"
+                    MatchIsPointer "on"
+                    Driver "evdev"
+                    Option "Emulate3Buttons" "false"
+                    Option "VertScrollDelta" "-100"
+                    Option "HorizScrollDelta" "-100"
+                  EndSection
+                ''
+            ];
         };
     };
 
