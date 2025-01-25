@@ -44,5 +44,14 @@
         spotify
         ddev
         _1password-gui
+
+        #System76
+         #system76-acpi-dkms
+         system76-firmware
+         system76-keyboard-configurator 
+         system76-power
+         system76-scheduler
+      
+
     ];
 }
