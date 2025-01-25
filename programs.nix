@@ -4,8 +4,7 @@
     ...
 }: {
     environment.systemPackages = with pkgs; [
- 
-        # Basic utilities
+        # Basic utilitiess
         vim
         wget
         screen
@@ -16,9 +15,9 @@
         playerctl
         brightnessctl
         neofetch
-
-        # Web
-        google-chrome
+	
+	# Web
+	google-chrome        
 
         # Word processing
         hunspellDicts.en-us
@@ -29,18 +28,13 @@
         pavucontrol
         pulsemixer
         pulseaudio-ctl
-
+        
         # Communication
         mattermost-desktop
         zoom-us
 
-        # Coding
-        vscode
-        docker
-
-        # System76
-        system76-firmware
+        #Coding
+	vscode
+	docker
     ];
-
 }
-

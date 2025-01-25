@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    home-manager.url = "github:nix-community/home-manager";  # Add Home Manager input
   };
 
   outputs = inputs: let
@@ -14,14 +13,12 @@
     };
   in {
     nixosConfigurations = {
-      sheaffersmith = lib.nixosSystem {
-        specialArgs = { inherit pkgs inputs; };
+      cambiar = lib.nixosSystem {
+        specialArgs = { inherit system; };
         modules = [
           ./configuration.nix
-          inputs.home-manager.nixosModules.home-manager  # Add Home Manager module
         ];
       };
     };
   };
 }
-
