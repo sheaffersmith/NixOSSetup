@@ -24,7 +24,7 @@
         libreoffice
         hunspell
 
-        # Audio control
+        # Audio controlcustomizable terminal linux
         pavucontrol
         pulsemixer
         pulseaudio-ctl
@@ -34,7 +34,15 @@
         zoom-us
 
         #Coding
-	vscode
-	docker
+	    vscode
+	    docker
+        openvpn
+        dropbox
+        arduino
+        #asana
+        home-manager
+        spotify
+        ddev
+        _1password-gui
     ];
 }
