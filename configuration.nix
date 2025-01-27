@@ -57,6 +57,7 @@
 #Patrick suggested video driver fix
 hardware.system76.enableAll = true;
 services.power-profiles-daemon.enable = false;
+	hardware.intel-gpu-tools.enable = true;
 
 
   # Configure keymap in X11
