@@ -54,6 +54,11 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.pantheon.enable = true;
 
+#Patrick suggested video driver fix
+hardware.system76.enableAll = true;
+services.power-profiles-daemon.enable = false;
+
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";

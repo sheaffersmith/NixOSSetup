@@ -51,7 +51,8 @@
          system76-keyboard-configurator 
          system76-power
          system76-scheduler
-      
 
-    ];
-}
+        #graphics
+        intel-graphics-compiler  
+
+    ];}
